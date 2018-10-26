@@ -47,10 +47,14 @@ Take into account the following requirements
 
 ## Architecture
 Type architecture Web over Angular 4.
-img
+![alt text](https://github.com/andrufel94/mercasnacks/edit/mercasnacksAndresLuque/images/Architecture.png)
+
 
 ## Mockups
 Over this app, you can show list enabled products and add wish products shopping cart.
-img
+
+![alt text](https://github.com/andrufel94/mercasnacks/edit/mercasnacksAndresLuque/images/MoqupsWebPage1.png)
+
 The shopping cart can show your products select and know price total.
-img
+
+![alt text](https://github.com/andrufel94/mercasnacks/edit/mercasnacksAndresLuque/images/MoqupsWebPage2.png)
