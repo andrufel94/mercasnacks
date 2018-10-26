@@ -22,26 +22,6 @@
     write them down in a markdown file inside your repo.
  7. Create a Pull Request (in your own fork), add 'davidcp90' as a reviewer, and send an email to
     david.camargo@mercadoni.com
-
-## Instructions for mobile developers
- 1. Fork this repo.
- 2. Create a new branch.
- 3. Understand the requirement and
-    the user stories. As your first commit, select your tech stack
-    (Android: use kotlin as the main language and the libraries of your
-    choice, iOS: use swift as the main language and the libraries of
-    your choice) and design the "architecture" of your app. Upload a
-    sketch/photo/readme, etc, explaining how your app is going to work,
-    why did you choose that stack and when do you think you can deliver
-    the final product (we expect you to deliver it in less than 5 days).
-    Send an email to david.camargo@mercadoni.com referring the commit
-    you made.
- 4. Have fun coding this challenge. Take into account that the
-    data provided could have inconsistencies, make sure to handle them.  
- 5. If you find blockers, keep moving and get them solved later, please
-    write them down in a markdown file inside your repo.
- 6. Create a Pull Request (in your own fork), add 'davidcp90' as a reviewer, and send an email to
-    david.camargo@mercadoni.com
 ## Requirements
 Mercadoni wants to have a "landing page" for parents to buy snacks for their children.
 Take into account the following requirements
@@ -64,3 +44,13 @@ Take into account the following requirements
 4. Customers should be able to add products to cart.
 5. Customers should be able to open the cart drawer and see products added and totals.
 6. Any UX improvement will be accepted and give you extra points, but take into account the previous requirements.
+
+## Architecture
+Type architecture Web over Angular 4.
+img
+
+## Mockups
+Over this app, you can show list enabled products and add wish products shopping cart.
+img
+The shopping cart can show your products select and know price total.
+img
