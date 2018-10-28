@@ -1,0 +1,17 @@
+<div *ngFor="let i of rows" class="row">
+    <div *ngFor="let product of products| slice:(i*itemsPerRow):(i+1)*itemsPerRow">
+        <div class="col-sm-4">
+            <div class="card">
+                <img class="img-rounded img-product" src="{{product.image_url}}" />
+                <div class="">
+                    <p class="name-product">{{product.name}}</p>
+                    <div class="price small-text">{{product.price | currency:'USD':'symbol':'1.0-0'}}</div>
+                    <div class="price large-text">{{product.special_price | currency:'USD':'symbol':'1.0-0'}}</div>
+                    <div class="agent">
+                        <span class="glyphicon glyphicon-shopping-cart"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
