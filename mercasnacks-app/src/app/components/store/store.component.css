@@ -52,8 +52,13 @@
     bottom: 30px;
     text-align: center;
     right: 40px;
+    font-size: 20px;
 }
 
-::ng-deep .glyphicon-shopping-cart {
+/* ::ng-deep .glyphicon-shopping-cart {
     font-size: 20px;
+} */
+
+::ng-deep .agent:hover {
+    color: #531e60;
 }

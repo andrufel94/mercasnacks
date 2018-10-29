@@ -1,0 +1,16 @@
+<div class="row">
+    <h1>{{title}}</h1>
+</div>
+<div class="row totalCart">
+    <h1>Total</h1>
+</div>
+<div class="row">
+    <div *ngFor="let product of shoppingCartProducts">
+        <div class="col-sm-12">
+            <div class="">
+                <p class="name-product">{{product.name}}</p>
+                <p class="name-product">{{product.price | currency:'USD':'symbol':'1.0-0'}}</p>
+            </div>
+        </div>
+    </div>
+</div>

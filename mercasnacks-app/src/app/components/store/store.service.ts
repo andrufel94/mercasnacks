@@ -7631,12 +7631,33 @@ export class StoreService {
         });
     }
 
-    //  Method: Get all producto by url
-    getProjectsByUrl() {   
+    //  Method: Get all product by url
+    getProductsByUrl() {   
         let headers = new Headers({
             'Content-Type': 'application/json'
         });
         
         return this._http.get(this.url, { headers: headers }).map(res => this.transformProducts(res.json().retailer.products));
+    }
+
+    //  Method: Get all product into shopping cart
+    getProductsCart(){
+        let aProductsCart: Product[];
+        aProductsCart = JSON.parse(localStorage.getItem('aProductsCart'));
+
+        if(aProductsCart == null){
+            aProductsCart = [];
+        }
+        return aProductsCart;
+    }
+
+    //  Method: Save a product into shopping cart
+    saveProductsCart(product: Product){
+        let aProductsCart: Product[];
+        aProductsCart = this.getProductsCart();
+        aProductsCart.push(product);        
+
+        localStorage.setItem('aProductsCart', JSON.stringify(aProductsCart));
+        return aProductsCart;
     }
 }

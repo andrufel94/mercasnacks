@@ -13,11 +13,12 @@ import { Product } from '../../models/product';
 })
 export class StoreComponent implements OnInit {
     public products: Product[];
+    // public productsCart: Product[];
     public itemsPerRow;
     public rows;
 
     constructor(
-        private _productService: StoreService
+        private _storeService: StoreService
     ) {
         this.itemsPerRow = 3; // Number of card by row, move value to config
     }
@@ -28,18 +29,22 @@ export class StoreComponent implements OnInit {
 
     // Method: Get all products
     getProducts() {
-        this._productService.getProjectsByUrl().subscribe(
+        this._storeService.getProductsByUrl().subscribe(
             res => {
                 this.products = res;
                 this.rows = Array.from(
                     Array(Math.ceil(this.products.length / this.itemsPerRow)).keys()
                 );
-                console.log(this.products);
             },
             error => {
                 console.log("Error: " + error);
                 return error;
             }
-        )
+        );
+    }
+
+    // Method: Save product selected into shopping cart
+    saveProductCart(event, product) {
+        this._storeService.saveProductsCart(product);
     }
 }

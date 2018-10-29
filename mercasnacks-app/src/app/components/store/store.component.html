@@ -8,7 +8,7 @@
                     <div class="price small-text">{{product.price | currency:'USD':'symbol':'1.0-0'}}</div>
                     <div class="price large-text">{{product.special_price | currency:'USD':'symbol':'1.0-0'}}</div>
                     <div class="agent">
-                        <span class="glyphicon glyphicon-shopping-cart"></span>
+                        <span class="glyphicon glyphicon-shopping-cart" (click)="saveProductCart($event, product)"></span>
                     </div>
                 </div>
             </div>

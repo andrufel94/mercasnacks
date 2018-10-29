@@ -21,15 +21,18 @@
     width: 100%;
     transition: 0.2s;
     z-index: 100;
+    height: 60px;
  }
 
- ::ng-deep .agent {
+ ::ng-deep .principalCart {
     position: absolute;
-    bottom: 30px;
+    /* bottom: 30px; */
     text-align: center;
-    right: 40px;
+    right: 30px;
+    top: 10px;
+    font-size: 40px;
 }
 
-::ng-deep .glyphicon-shopping-cart {
-    font-size: 200px;
+::ng-deep .principalCart:hover {
+    color: #531e60;
 }
