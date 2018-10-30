@@ -3,3 +3,10 @@
     padding: 2px;
     background-color: #683973;
 }
+.small-cart {
+    font-size: 10px;
+}
+.img-product-small {
+    width: 100%;
+    height: auto;
+}

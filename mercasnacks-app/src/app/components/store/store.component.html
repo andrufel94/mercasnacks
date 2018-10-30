@@ -1,3 +1,4 @@
+<button mat-button (click)="sortProductsByPrice()">Ordenar</button>
 <div *ngFor="let i of rows" class="row">
     <div *ngFor="let product of products| slice:(i*itemsPerRow):(i+1)*itemsPerRow">
         <div class="col-sm-4">

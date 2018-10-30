@@ -1,15 +1,30 @@
 <div class="row">
-    <h1>{{title}}</h1>
+    <h2>{{title}}</h2>
 </div>
 <div class="row totalCart">
-    <h1>Total</h1>
+    <h3>Total: {{totalPrice | currency:'USD':'symbol':'1.0-0'}}</h3>
 </div>
 <div class="row">
     <div *ngFor="let product of shoppingCartProducts">
         <div class="col-sm-12">
-            <div class="">
-                <p class="name-product">{{product.name}}</p>
-                <p class="name-product">{{product.price | currency:'USD':'symbol':'1.0-0'}}</p>
+            <div class="small-cart">
+                <table>
+                    <tr>
+                        <td rowspan="2">
+                            <img class="img-rounded img-product-small" src="{{product.image_url}}" />
+                        </td>
+                        <td>
+                            <p class="name-product">{{product.name}}</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="name-product">{{product.price | currency:'USD':'symbol':'1.0-0'}}</p>
+                        </td>
+                    </tr>
+                </table>
+
+
             </div>
         </div>
     </div>

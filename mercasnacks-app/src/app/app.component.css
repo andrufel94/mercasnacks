@@ -42,8 +42,14 @@
     background-color: #531E60;
     color: #F0F0F0;
     /* height: 60%; */
-    top: 50px;
+    top: 50px !important;
     width: 20%;
+    position: fixed !important
+}
+
+.sidebar-into {
+    padding: 10px 5px;
+    margin: 5px;
 }
 
 ::ng-deep .container {

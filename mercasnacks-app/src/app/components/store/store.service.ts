@@ -21,11 +21,10 @@ export class StoreService {
     private transformProducts(productsUnformat): Product[] {
         return productsUnformat.map((product) => {
             let productSimple = new Product();
-            // console.log(product);
+            
             productSimple.special_price = product.special_price;
             productSimple.price = (product.price == null) ? 0 : product.price;
             productSimple._id = product._id;
-            // console.log(product.price);
             productSimple.active = product.active;
             productSimple.name = product.name;
             productSimple.image_url = product.image_url;
@@ -62,5 +61,19 @@ export class StoreService {
 
         localStorage.setItem('aProductsCart', JSON.stringify(aProductsCart));
         return aProductsCart;
+    }
+
+    //  Method: Sort array product by preci
+    sortProducts(aProductsUnsort: Product[], sValue: string ,order: number){
+        aProductsUnsort.sort(function (a, b) {
+            if (a[sValue] > b[sValue]) {
+              return 1 * order;
+            }
+            if (a[sValue] < b[sValue]) {
+              return -1 * order;
+            }
+            // a must be equal to b
+            return 0;
+          });
     }
 }

@@ -1,8 +1,8 @@
 export class Product {
-    special_price: number;
-    price: number;
-    _id: string;
-    active: boolean;
-    name: String;
-    image_url: string;
+    public special_price: number;
+    public price: number;
+    public _id: string;
+    public active: boolean;
+    public name: String;
+    public image_url: string;
 }

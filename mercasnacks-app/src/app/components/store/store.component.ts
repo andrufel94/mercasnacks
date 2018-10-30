@@ -14,13 +14,15 @@ import { Product } from '../../models/product';
 export class StoreComponent implements OnInit {
     public products: Product[];
     // public productsCart: Product[];
-    public itemsPerRow;
+    public itemsPerRow: number;
     public rows;
+    public order: number;
 
     constructor(
         private _storeService: StoreService
     ) {
         this.itemsPerRow = 3; // Number of card by row, move value to config
+        this.order = -1;
     }
 
     ngOnInit() {
@@ -46,5 +48,11 @@ export class StoreComponent implements OnInit {
     // Method: Save product selected into shopping cart
     saveProductCart(event, product) {
         this._storeService.saveProductsCart(product);
+    }
+
+    // Method: Sort list products
+    sortProductsByPrice(){
+        this._storeService.sortProducts(this.products, "price", this.order);
+        this.order = this.order * -1;
     }
 }

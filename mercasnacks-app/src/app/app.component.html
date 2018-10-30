@@ -1,47 +1,20 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div>
-  <!-- Navigation-->
-  <!-- <nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <a class="navbar-brand" [routerLink]="['/']">{{title}}</a>
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-collapse-ex">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-      </div>
-      <div class="navbar-collapse collapse" id="nav-collapse-ex">
-        <ul class="nav navbar-nav navbar-right">
-          <li>
-            <a href="#">
-              <span class="glyphicon glyphicon-user"></span> Sign Up</a>
-          </li>
-          <li>
-            <a a href="#">
-              <span class="glyphicon glyphicon-log-in"></span> Login</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav> -->
-
-
   <div class="header">
     <div class="principalCart">
       <span class="glyphicon glyphicon glyphicon-shopping-cart" (click)="snav.toggle()"></span>
     </div>
   </div>
-
+  
   <mat-sidenav-container>
     <mat-sidenav #snav mode="over.true" position="end" class="sidebar">
-      <mat-nav-list>
-        <a mat-list-item routerLink="." *ngFor="let nav of fillerNav">{{nav}}</a>
+      <mat-nav-list class="sidebar-into">
+        <shoppingCart></shoppingCart>
       </mat-nav-list>
     </mat-sidenav>
 
     <mat-sidenav-content class="container">
-      <div class="container-fluid Felipe">
+      <div class="container-fluid">
         <router-outlet></router-outlet>
       </div>
     </mat-sidenav-content>
