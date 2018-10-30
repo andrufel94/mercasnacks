@@ -25,14 +25,29 @@
       </div>
     </div>
   </nav> -->
+
+
   <div class="header">
     <div class="principalCart">
-      <span class="glyphicon glyphicon-shopping-cart"></span>
+      <span class="glyphicon glyphicon glyphicon-shopping-cart" (click)="snav.toggle()"></span>
     </div>
   </div>
-  <div class="container-fluid">
-    <router-outlet></router-outlet>
-  </div>
+
+  <mat-sidenav-container>
+    <mat-sidenav #snav mode="over.true" position="end" class="sidebar">
+      <mat-nav-list>
+        <a mat-list-item routerLink="." *ngFor="let nav of fillerNav">{{nav}}</a>
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content class="container">
+      <div class="container-fluid Felipe">
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
+
+  </mat-sidenav-container>
+
   <div class="footer">
   </div>
 </div>

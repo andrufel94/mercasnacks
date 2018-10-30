@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Mercasnacks';
+  public title;
+  public fillerNav: any;
+
+  constructor() {
+    this.title = "Mercasnacks";
+    this.fillerNav = Array.from({length: 50}, (_, i) => `Nav Item ${i + 1}`);
+  }
 }

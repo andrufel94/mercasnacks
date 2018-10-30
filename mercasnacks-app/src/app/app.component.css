@@ -8,6 +8,7 @@
     background-color: #00c491;
     color: white;
     text-align: center;
+    z-index: 100;
  }
 
  ::ng-deep .header {
@@ -35,4 +36,16 @@
 
 ::ng-deep .principalCart:hover {
     color: #531e60;
+}
+
+::ng-deep .sidebar {
+    background-color: #531E60;
+    color: #F0F0F0;
+    /* height: 60%; */
+    top: 50px;
+    width: 20%;
+}
+
+::ng-deep .container {
+    top: 60px;
 }
