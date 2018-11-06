@@ -1,0 +1,55 @@
+.sidebar-content{
+    margin-top: 60px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.sidebar-total{
+    background-color: #683973;
+    border-radius: 4px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.sidebar-nameproduct{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+
+.fxClass-xs{
+    font-size: 90%;
+}
+
+.fxClass-sm{
+    font-size: 90%;
+}
+
+.fxClass-md{
+    font-size: 100%;
+}
+
+.large-text {
+    font-size: 24px;
+}
+
+.small-text {
+    font-size: 14px;
+    text-decoration:line-through;
+}
+
+.fixed-header {
+    position: fixed;
+    background-color: #531E60;
+}
+
+.sidebar-card{
+    border-bottom: 1px solid rgba(189,208,255,.5);
+    margin-top: 2px;
+    color: black;
+}
+
+.mat-list-item {
+    height: auto !important;
+}

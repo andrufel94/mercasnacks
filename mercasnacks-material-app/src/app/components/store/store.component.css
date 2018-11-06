@@ -1,0 +1,26 @@
+.example-card {
+    margin: 1%;
+}
+
+.large-text {
+  font-size: 24px;
+  color: #333;
+}
+
+.small-text {
+  font-size: 14px;
+  color: #333;
+  text-decoration:line-through;
+}
+
+.fxClass-xs{
+  font-size: 100%;
+}
+
+.fxClass-sm{
+  font-size: 80%;
+}
+
+.fxClass-md{
+  font-size: 90%;
+}

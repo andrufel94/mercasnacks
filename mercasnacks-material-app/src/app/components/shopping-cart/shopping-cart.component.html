@@ -1,0 +1,102 @@
+<div fxLayout="column" fxLayoutGap="10px" class="sidebar-content">
+    <div fxLayout="column" fxLayoutAlign="start stretch">
+        <h2>
+            <mat-icon>shopping_cart</mat-icon> {{title}}</h2>
+        <div class="sidebar-total">
+            <div fxLayoutAlign="start" fxFlex="50%">
+                <h3>Total:</h3>
+            </div>
+            <div fxLayoutAlign="end" fxFlex="50%">
+                <h3>{{totalPrice | currency:'USD':'symbol':'1.0-0'}}</h3>
+            </div>
+        </div>
+    </div>
+    <div style="background-color: white;">
+        <!-- <div *ngFor="let product of shoppingCartProducts" class="sidebar-card">
+            <div fxLayout="row" fxLayoutAlign="center stretch">
+                <div fxFlex="none">
+                    <img src="{{product.image_url}}" alt="{{product.name}}" style="min-width: 80px; max-width: 80px;">
+                </div>
+                <div fxFlex="40">
+                    <div style="padding-right: 5%; padding-left: 5%;" class="sidebar-nameproduct">
+                        {{product.name}}
+                    </div>
+                </div>
+                <div fxFlex="none">
+                    <div fxLayout="column">
+                        <div class="price small-text">
+                            {{product.price | currency:'USD':'symbol':'1.0-0'}}
+                        </div>
+                        <div class="price large-text">
+                            {{product.special_price | currency:'USD':'symbol':'1.0-0'}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <mat-list *ngIf="shoppingCartProducts.length > 0">
+            <div *ngFor="let product of shoppingCartProducts" class="sidebar-card">
+                <mat-list-item>
+                    <div>
+                        <img src="{{product.image_url}}" alt="{{product.name}}" style="min-width: 80px; max-width: 80px;">
+                    </div>
+                    <div style="padding-right: 5%; padding-left: 5%;" class="sidebar-nameproduct" fxFlex>
+                        {{product.name}}
+                    </div>
+                    <div fxLayout="column">
+                        <div class="price small-text">
+                            {{product.price | currency:'USD':'symbol':'1.0-0'}}
+                        </div>
+                        <div class="price large-text">
+                            {{product.special_price | currency:'USD':'symbol':'1.0-0'}}
+                        </div>
+                    </div>
+                    <div>
+                        <mat-icon (click)="deleteProductCart($event, product)" color="warn">delete_forever</mat-icon>
+                    </div>
+                </mat-list-item>
+                <mat-divider></mat-divider>
+            </div>
+        </mat-list>
+
+
+        <!-- <mat-divider style="border-top-color:white; margin-bottom: 5px;"></mat-divider> -->
+        <!-- <mat-grid-list cols="2">
+            <mat-grid-tile [colspan]="1" [rowspan]="2">
+                <img mat-card-image class="img" src="{{product.image_url}}">
+            </mat-grid-tile>
+            <mat-grid-tile [colspan]="1" [rowspan]="1">
+                <p class="name-product">{{product.name}}</p>
+            </mat-grid-tile>
+            <mat-grid-tile [colspan]="1" [rowspan]="1">
+                <p class="name-product">{{product.price | currency:'USD':'symbol':'1.0-0'}}</p>
+            </mat-grid-tile>
+        </mat-grid-list> -->
+        <!-- <mat-card>
+            <div fxLayout="row" fxLayoutAlign="space-around stretch">
+                <div fxFlex="25">
+                    <img mat-card-image src="{{product.image_url}}" alt="{{product.name}}" style="min-width: 80px; max-width: 80px;">
+                </div>
+                <span fxFlex="10"></span>
+                <mat-card-content fxFlex="65">
+                    <div fxLayout="column" ngClass.xs="fxClass-xs" ngClass.sm="fxClass-sm" ngClass.md="fxClass-md">
+                        <div fxLayout="row">
+                            <div style="padding-right: 5%;" class="sidebar-nameproduct">
+                                {{product.name}}
+                            </div>
+                            <div fxLayout="column">
+                                <div class="price small-text">
+                                    {{product.price | currency:'USD':'symbol':'1.0-0'}}
+                                </div>
+                                <div class="price large-text">
+                                    {{product.special_price | currency:'USD':'symbol':'1.0-0'}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </mat-card-content>
+            </div>
+        </mat-card> -->
+    </div>
+</div>

@@ -1,0 +1,26 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<!-- <mat-toolbar>
+  <span>Welcome to {{ title }}!</span>
+  <div style="text-align:center">
+  </div>
+  <router-outlet></router-outlet>
+</mat-toolbar> -->
+
+<mat-toolbar color="primary" class="fixed-header">
+  <!-- This fills the remaining space of the current row -->
+  <span class="example-fill-remaining-space"></span>
+  <mat-icon (click)="snav.toggle()" matBadge="{{countProductsCart}}" matBadgeColor="warn">shopping_cart</mat-icon>
+</mat-toolbar>
+<div style="margin-top: 60px">
+  <mat-sidenav-container>
+    <mat-sidenav #snav mode="over.true" position="end" class="sidebar" opened="true" fxLayout="column" ngClass.xs="fxSideBarClass-xs"
+      ngClass.sm="fxSideBarClass-sm" ngClass.md="fxSideBarClass-md">
+      <shopping-cart></shopping-cart>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <div>
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

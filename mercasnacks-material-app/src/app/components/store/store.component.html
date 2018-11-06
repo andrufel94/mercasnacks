@@ -1,0 +1,27 @@
+<div fxFlex fxFlexAlign="start">
+    <div *ngFor="let i of rows" fxLayout="row" fxLayout.xs="column wrap">
+        <mat-card *ngFor="let product of products| slice:(i*itemsPerRow):(i+1)*itemsPerRow" class="
+        example-card " fxFlex="{{100/itemsPerRow}}%">
+            <img mat-card-image src="{{product.image_url}} " alt="{{product.name}} ">
+            <mat-card-content fxLayoutAlign=" stretch">
+                <div style="padding-right: 5%;" ngClass.xs="fxClass-xs" ngClass.sm="fxClass-sm" ngClass.md="fxClass-md">
+                    {{product.name}}
+                </div>
+                <div>
+                    <div class="price small-text">
+                        {{product.price | currency:'USD':'symbol':'1.0-0'}}
+                    </div>
+                    <div class="price large-text">
+                        {{product.special_price | currency:'USD':'symbol':'1.0-0'}}
+                    </div>
+                </div>
+            </mat-card-content>
+            <mat-card-actions fxLayout="row" fxLayoutAlign="center center">
+                <button mat-raised-button color="primary" (click)="saveProductCart($event, product)">
+                    Añadir
+                    <mat-icon>shopping_cart</mat-icon>
+                </button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</div>

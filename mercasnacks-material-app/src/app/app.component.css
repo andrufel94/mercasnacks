@@ -1,0 +1,31 @@
+.example-fill-remaining-space {
+  /* This fills the remaining space, by using flexbox. 
+  Every toolbar row uses a flexbox row layout. */
+  flex: 1 1 auto;
+}
+
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.sidebar {
+  background-color: #531E60;
+  color: #F0F0F0;
+  position: fixed !important;
+  width: 40%;
+}
+
+.fxSideBarClass-xs{
+  width: 90%;
+}
+
+.fxSideBarClass-sm{
+  width: 90%;
+}
+
+.fxSideBarClass-md{
+  width: 40%;
+}
