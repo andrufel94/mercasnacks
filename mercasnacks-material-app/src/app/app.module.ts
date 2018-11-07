@@ -12,7 +12,8 @@ import { MatButtonModule,
   MatBadgeModule,
   MatGridListModule,
   MatDividerModule,
-  MatListModule
+  MatListModule,
+  MatSnackBarModule
  } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -46,6 +47,7 @@ import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.
     MatGridListModule,
     MatDividerModule,
     MatListModule,
+    MatSnackBarModule,
     // Angular Flex Layout
     FlexLayoutModule
   ],

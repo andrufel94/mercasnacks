@@ -1,5 +1,6 @@
 import { Component } from "@angular/core";
 import { OnInit } from '@angular/core/src/metadata/lifecycle_hooks'
+import { MatSnackBar } from '@angular/material';
 // Services
 import { ProductService } from "../../services/products.service";
 // Models
@@ -17,6 +18,7 @@ export class StoreComponent implements OnInit {
     public rows;
 
     constructor(
+        private snackBar: MatSnackBar,
         private _productService: ProductService
     ) {
         this.itemsPerRow = 3; // Number of card by row, move value to config
@@ -51,5 +53,8 @@ export class StoreComponent implements OnInit {
     //  ****************************************************
     saveProductCart(event, product) {
         this._productService.saveProductsCart(product);
+        this.snackBar.open(product.name, "Saved", {
+            duration: 2000,
+        });
     }
 }
